@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.corral_client"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <permission
+        android:name="com.example.corral_client.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.example.corral_client.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <android:uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDIrM60j2WYdYQEqi7lpEFgcRCo1FJMKgY" />
+
+        <activity
+            android:name="com.example.ruchika.corral_client.Login.SignUpActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.ruchika.corral_client.Chat.ChatActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <receiver
+            android:name="com.example.ruchika.corral_client.Chat.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.example.corral_client" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.example.ruchika.corral_client.Chat.GCMNotificationIntentService" />
+
+        <activity
+            android:name="com.example.ruchika.corral_client.Chat.UserListActivity"
+            android:label="@string/title_activity_user_list"
+            android:parentActivityName="com.example.ruchika.corral_client.Additional_Features.DrawerActivity"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ruchika.corral_client.Additional_Features.DrawerActivity" />
+        </activity>
+        <activity
+            android:name="com.example.ruchika.corral_client.Login.SplashiActivity"
+            android:label="@string/title_activity_splashi" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.ruchika.corral_client.Login.FrontActivity"
+            android:label="@string/title_activity_front" >
+        </activity>
+        <activity
+            android:name="com.example.ruchika.corral_client.Additional_Features.DrawerActivity"
+            android:label="@string/title_activity_drawer" >
+        </activity>
+        <activity
+            android:name="com.example.ruchika.corral_client.Additional_Features.NearBy"
+            android:label="@string/title_activity_near_by"
+            android:parentActivityName="com.example.ruchika.corral_client.Additional_Features.DrawerActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ruchika.corral_client.Additional_Features.DrawerActivity" />
+        </activity>
+        <activity
+            android:name="com.example.ruchika.corral_client.Additional_Features.FoodOrder"
+            android:label="@string/title_activity_food_order"
+            android:parentActivityName="com.example.ruchika.corral_client.Additional_Features.DrawerActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ruchika.corral_client.Additional_Features.DrawerActivity" />
+        </activity>
+        <activity
+            android:name="com.example.ruchika.corral_client.Additional_Features.quit"
+            android:label="@string/title_activity_quit"
+            android:parentActivityName="com.example.ruchika.corral_client.Additional_Features.DrawerActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ruchika.corral_client.Additional_Features.DrawerActivity" />
+        </activity>
+        <activity
+            android:name="com.example.ruchika.corral_client.Database.DummyActivity"
+            android:label="@string/title_activity_dummy"
+            android:parentActivityName="com.example.ruchika.corral_client.Additional_Features.DrawerActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ruchika.corral_client.Additional_Features.DrawerActivity" />
+        </activity>
+        <activity
+            android:name="com.example.ruchika.corral_client.Additional_Features.Discussion"
+            android:label="@string/title_activity_discussion"
+            android:parentActivityName="com.example.ruchika.corral_client.Additional_Features.DrawerActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ruchika.corral_client.Additional_Features.DrawerActivity" />
+        </activity>
+        <activity
+            android:name="com.example.ruchika.corral_client.Login.TestActivity"
+            android:label="@string/title_activity_test"
+            android:parentActivityName="com.example.ruchika.corral_client.Additional_Features.DrawerActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ruchika.corral_client.Additional_Features.DrawerActivity" />
+        </activity>
+        <activity
+            android:name="com.example.ruchika.corral_client.Additional_Features.DiscussionZone"
+            android:label="@string/title_activity_discussion_zone"
+            android:parentActivityName="com.example.ruchika.corral_client.Additional_Features.DrawerActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ruchika.corral_client.Additional_Features.DrawerActivity" />
+        </activity>
+        <activity
+            android:name="com.example.ruchika.corral_client.Additional_Features.DiscussionResponse"
+            android:label="@string/title_activity_discussion_response"
+            android:parentActivityName="com.example.ruchika.corral_client.Additional_Features.DiscussionZone" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ruchika.corral_client.Additional_Features.DiscussionZone" />
+        </activity>
+    </application>
+
+</manifest>

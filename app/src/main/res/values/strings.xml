@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">Corral_Client</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="login">Login</string>
+    <string name="signup">Sign Up</string>
+    <string name="title_activity_sign_up">Login</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="title_activity_user_list">UserListActivity</string>
+    <string name="enter_username">Enter Username</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="title_activity_chat">ChatActivity</string>
+    <string name="title_activity_splashi">SplashiActivity</string>
+    <string name="title_activity_front">FrontActivity</string>
+    <string name="loginText">Please login with your Google Account</string>
+    <string name="logout">Logout</string>
+    <string name="title_activity_drawer">DrawerActivity</string>
+    <string name="title_activity_navigation_drawer_fragment">NavigationDrawerFragment</string>
+    <string name="title_activity_near_by">NearBy</string>
+    <string name="title_activity_food_order">FoodOrder</string>
+    <string name="title_activity_quit">quit</string>
+
+    <string name="title_section1">Home</string>
+    <string name="title_section2">Online Users</string>
+    <string name="title_section3">Browse Restaurants</string>
+    <string name="title_section4">Discussion</string>
+    <string name="title_section5">Discussion Zone</string>
+
+    <string name="title_section6">Order Food</string>
+    <string name="title_section7">Exit</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+    <string name="title_activity_dummy">DummyActivity</string>
+    <string name="title_activity_discussion">Discussion</string>
+    <string name="OnlineUsers">Online Users</string>
+
+    <string name="cuisine_type_title">Choose your Cuisine Type</string>
+
+    <string-array name="Cuisine_arrays">
+        <item>  </item>
+        <item>North Indian</item>
+        <item>Chinese</item>
+        <item>Continental</item>
+        <item>Italian</item>
+        <item>Cakes</item>
+        <item>Others</item>
+    </string-array>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_discussion_zone">DiscussionZone</string>
+    <string name="title_activity_discussion_response">DiscussionResponse</string>
+
+
+</resources>

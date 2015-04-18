@@ -1,0 +1,118 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.ruchika.corral_client.Additional_Features.Discussion" >
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Put Your Preference here:"
+        android:id="@+id/txtpreference"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cuisine Type:"
+        android:id="@+id/txtCuisine"
+        android:layout_marginTop="83dp"
+        android:layout_below="@+id/txtpreference"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Place"
+        android:id="@+id/textView"
+        android:layout_alignBottom="@+id/PlaceSelectionBox"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <AutoCompleteTextView
+        android:id="@+id/PlaceSelectionBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:imeOptions="actionDone"
+        android:inputType="textAutoComplete|textAutoCorrect"
+        android:layout_below="@+id/Cuisine_TypeSelectBox"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <AutoCompleteTextView
+        android:id="@+id/Cuisine_TypeSelectBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:imeOptions="actionDone"
+        android:inputType="textAutoComplete|textAutoCorrect"
+        android:layout_alignTop="@+id/txtCuisine"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Min Order"
+        android:id="@+id/txtMin_Order"
+        android:layout_alignBottom="@+id/Min_Order"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+    <AutoCompleteTextView
+        android:id="@+id/Min_Order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:imeOptions="actionDone"
+        android:inputType="number"
+        android:layout_below="@+id/PlaceSelectionBox"
+        android:layout_alignLeft="@+id/PlaceSelectionBox"
+        android:layout_alignStart="@+id/PlaceSelectionBox" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="POST"
+        android:id="@+id/btnPost"
+        android:layout_marginTop="92dp"
+        android:onClick="Post"
+        android:layout_below="@+id/Min_Order"
+        android:background="@drawable/buttonshape"
+        android:textColor="#FFFFFF"
+        android:shadowColor="#811FAB"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:layout_alignLeft="@+id/Min_Order"
+        android:layout_alignStart="@+id/Min_Order" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CLEAR"
+        android:id="@+id/btnClear"
+        android:onClick="Clear"
+        android:background="@drawable/buttonshape"
+        android:textColor="#FFFFFF"
+        android:shadowColor="#811FAB"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:layout_alignTop="@+id/btnPost"
+        android:layout_alignRight="@+id/Min_Order"
+        android:layout_alignEnd="@+id/Min_Order" />
+
+
+</RelativeLayout>
+

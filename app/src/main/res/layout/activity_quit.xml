@@ -1,0 +1,68 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    tools:context="com.example.aanchalsingh.corral_project.quit" tools:ignore="MergeRootFrame" >
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="15dp"
+        tools:context=".AndroidGooglePlusExample"
+        android:background="@drawable/backgroundfoodwallpaper"
+        android:layout_gravity="center_horizontal|bottom">
+        <LinearLayout
+            android:id="@+id/profileFrame"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible" >
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:contentDescription="profileimage" />
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="169dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textSize="20sp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="italic"
+                android:typeface="serif"
+                android:hint="@string/hello_world"
+                android:textColor="@color/white"/>
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="252dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textSize="16dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="italic"
+                android:typeface="serif"
+                android:hint="@string/hello_world"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="199dp"
+            android:layout_height="wrap_content"
+            android:onClick="exit"
+            android:padding="10dp"
+            android:text="EXIT"
+            android:textSize="18dp"
+            tools:ignore ="HardcodedText"
+            android:background="@drawable/buttonshape"
+            android:textColor="#FFFFFF"
+            android:shadowColor="#811FAB"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"/>
+    </LinearLayout>
+</FrameLayout>
